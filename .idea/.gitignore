@@ -1,5 +1,5 @@
-# Default ignored files
+# デフォルトの無視対象ファイル
 /shelf/
 /workspace.xml
-# Editor-based HTTP Client requests
+# エディターベースの HTTP クライアントリクエスト
 /httpRequests/
