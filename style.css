@@ -1,4 +1,10 @@
-/* 親要素に対してテキストの中央揃えを設定 */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 .parent {
   text-align: center;
 }
@@ -10,6 +16,21 @@ img {
   display: block;
 }
 
+table {
+  margin: 20px 0;
+  width: 40%; /* 必要に応じて調整 */
+}
+.table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+th, td {
+  padding: 8px 12px;
+  text-align: left;
+
+}
 
 body {
   text-align: center;
@@ -50,5 +71,6 @@ nav {
   text-align: center;
   margin: 2rem 0;
 }
+
 
 
