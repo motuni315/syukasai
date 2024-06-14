@@ -1,10 +1,43 @@
+/* style.css */
+
 body {
   display: flex;
   flex-direction: column;
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
+  text-align: center; /* 追加 */
 }
+
+li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* 適宜調整 */
+}
+
+ul li {
+  margin: 0 20px 100px; /* メニュー項目間の間隔を調整 */
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  transition: background-color 0.8s ease; /* ホバーエフェクトのアニメーション */
+}
+
+ul li a:hover {
+  background-color: #FFA500;
+}
+
+
 .parent {
   text-align: center;
 }
@@ -17,32 +50,15 @@ img {
 }
 
 table {
-  margin: 20px 0;
+  margin: 20px auto; /* 中央寄せに修正 */
   width: 40%; /* 必要に応じて調整 */
-}
-.table {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 th, td {
   padding: 8px 12px;
   text-align: left;
-
 }
 
-body {
-  text-align: center;
-
-}
-
-
-
-li {
-  list-style: none;
-  margin-bottom: 10px;
-}
 nav {
   position: relative;
 }
@@ -53,6 +69,9 @@ nav {
   cursor: pointer;
   margin: 10px;
   padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 .bar {
@@ -62,15 +81,52 @@ nav {
   margin: 4px 0;
 }
 
-.footer-content {
-  max-width: 60rem;
-  margin: 30px auto auto;
+.menu-items {
+  list-style: none;
+  padding: 0;
+  display: none;
+  background-color: orangered;
+  position: fixed;
+  top: 0;
+  left: -100%; /* 初期状態では画面外に隠す */
+  width: 250px; /* メニューの幅 */
+  height: 100vh; /* 画面全体の高さ */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease; /* アニメーションの追加 */
 }
 
-.map-container {
-  text-align: center;
-  margin: 2rem 0;
+.menu-items.show-menu {
+  left: 0; /* メニューを表示する位置に移動 */
+}
+
+.menu-icon {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 
+.menu-items.show-menu {
+  display: block;
+}
+
+.menu-items li {
+  margin: 10px 0;
+}
+
+.menu-items li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu-items li a:hover {
+  background-color: #FFD700;
+}
 
