@@ -13,6 +13,11 @@ img {
 
 body {
   text-align: center;
+
+}
+
+h1{
+  background: orangered;
 }
 
 li {
@@ -35,4 +40,8 @@ nav {
   height: 4px;
   background-color: black;
   margin: 4px 0;
+}
+
+.theme {
+  background: yellow;
 }
