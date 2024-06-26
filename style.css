@@ -130,3 +130,16 @@ nav {
   background-color: #FFD700;
 }
 
+@media screen and (max-width: 768px) {
+  p{
+    background-color: black;
+    color:green;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  p{
+    background-color: black;
+    color:red;
+  }
+}
