@@ -1,17 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-}
-.container {
-    width: 18cm;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+ .container {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 .title {
     width: 18cm;
     text-align: center;
