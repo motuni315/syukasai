@@ -7,6 +7,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   text-align: center; /* 追加 */
+  min-height: 100vh;
 }
 
 li {
@@ -23,7 +24,8 @@ ul {
 }
 
 ul li {
-  margin: 0 20px 100px; /* メニュー項目間の間隔を調整 */
+  margin-bottom: 10px;
+  text-align: center; /* テキストを中央揃え */
 }
 
 ul li a {
@@ -40,13 +42,14 @@ ul li a:hover {
 
 .parent {
   text-align: center;
+  margin-top: 20px;
 }
 
 /* 画像のスタイル設定 */
 img {
-  width: 70rem;
-  margin: auto;
-  display: block;
+  max-width: 100%; /* 画像を親要素に合わせてレスポンシブに */
+  height: auto; /* アスペクト比を維持 */
+
 }
 
 table {
@@ -96,7 +99,11 @@ nav {
 }
 
 .menu-items.show-menu {
-  left: 0; /* メニューを表示する位置に移動 */
+  left: 0;
+  display: flex; /* メニューをフルスクリーン表示 */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu-icon {
@@ -108,11 +115,6 @@ nav {
   position: absolute;
   top: 10px;
   left: 10px;
-}
-
-
-.menu-items.show-menu {
-  display: block;
 }
 
 .menu-items li {
@@ -130,16 +132,24 @@ nav {
   background-color: #FFD700;
 }
 
-@media screen and (max-width: 768px) {
-  p{
-    background-color: black;
-    color:green;
-  }
-}
 
-@media screen and (max-width: 480px) {
-  p{
-    background-color: black;
-    color:red;
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block; /* メニューアイコンを表示 */
+  }
+
+  .menu-items {
+    width: 100%; /* メニューの幅を100%に */
+    left: -100%; /* 初期状態では画面外に隠す */
+    z-index: 1; /* メニューをトップに */
+  }
+
+  .menu-items.show-menu {
+    left: 0; /* メニューを表示する位置に移動 */
+
+  }
+
+  .menu-items li {
+    margin: 10px 0;
   }
 }
