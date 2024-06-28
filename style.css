@@ -69,9 +69,9 @@ nav {
   cursor: pointer;
   margin: 10px;
   padding: 5px;
-  position: absolute;
+  position: fixed;
   top: 10px;
-  left: 10px;
+  left: 5px;
 }
 
 .bar {
@@ -84,12 +84,12 @@ nav {
 .menu-items {
   list-style: none;
   padding: 0;
+  margin: 0;
   display: none;
   background-color: orangered;
   position: fixed;
-  top: 0;
   left: -100%;
-  width: 250px;
+  width: 225px;
   height: 100vh;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   transition: left 0.3s ease;
@@ -122,13 +122,17 @@ nav {
 
 .close-icon {
   display: none;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
+  font-size: 30px;
   cursor: pointer;
   z-index: 10;
   color: black;
+  width: 30px;
+  height: 25px;
+  margin: 10px;
+  padding: 5px;
+  position: fixed;
+  top: 10px;
+  left: 5px;
 }
 
 .show-close .close-icon {

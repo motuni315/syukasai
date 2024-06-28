@@ -1,3 +1,5 @@
+// script.js
+
 function toggleMenu() {
   var menuItems = document.getElementById("menuItems");
   var closeIcon = document.querySelector(".close-icon");
@@ -5,11 +7,6 @@ function toggleMenu() {
   document.body.classList.toggle("show-close"); // Show/hide the close icon
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  var nav = document.querySelector("nav");
-
-  nav.addEventListener("mouseleave", closeMenuOutside);
-});
 
 function closeMenuOutside() {
   var menuItems = document.getElementById("menuItems");
