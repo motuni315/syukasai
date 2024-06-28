@@ -6,7 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  text-align: center; /* 追加 */
+  text-align: center;
   min-height: 100vh;
 }
 
@@ -20,41 +20,38 @@ ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* 適宜調整 */
+  margin-top: 20px;
 }
 
 ul li {
   margin-bottom: 10px;
-  text-align: center; /* テキストを中央揃え */
+  text-align: center;
 }
 
 ul li a {
   text-decoration: none;
   color: black;
   padding: 10px;
-  transition: background-color 0.8s ease; /* ホバーエフェクトのアニメーション */
+  transition: background-color 0.8s ease;
 }
 
 ul li a:hover {
   background-color: #FFA500;
 }
 
-
 .parent {
   text-align: center;
   margin-top: 20px;
 }
 
-/* 画像のスタイル設定 */
 img {
-  max-width: 100%; /* 画像を親要素に合わせてレスポンシブに */
-  height: auto; /* アスペクト比を維持 */
-
+  max-width: 100%;
+  height: auto;
 }
 
 table {
-  margin: 20px auto; /* 中央寄せに修正 */
-  width: 40%; /* 必要に応じて調整 */
+  margin: 20px auto;
+  width: 40%;
 }
 
 th, td {
@@ -91,65 +88,74 @@ nav {
   background-color: orangered;
   position: fixed;
   top: 0;
-  left: -100%; /* 初期状態では画面外に隠す */
-  width: 250px; /* メニューの幅 */
-  height: 100vh; /* 画面全体の高さ */
+  left: -100%;
+  width: 250px;
+  height: 100vh;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  transition: left 0.3s ease; /* アニメーションの追加 */
+  transition: left 0.3s ease;
 }
 
 .menu-items.show-menu {
   left: 0;
-  display: flex; /* メニューをフルスクリーン表示 */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.menu-icon {
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  margin: 10px;
-  padding: 5px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
 .menu-items li {
-  margin: 10px 0;
+  margin: 0;
+  width: 100%;
 }
 
 .menu-items li a {
   display: block;
-  padding: 10px;
+  padding: 15px 10px;
   text-decoration: none;
   color: black;
+  width: calc(100% - 20px);
 }
 
 .menu-items li a:hover {
   background-color: #FFD700;
 }
 
+.close-icon {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  color: black;
+}
+
+.show-close .close-icon {
+  display: block;
+}
 
 @media screen and (max-width: 768px) {
+  /* スマートフォン向けのスタイル調整 */
+  body {
+    font-size: 14px; /* 文字サイズを調整 */
+  }
+
   .menu-icon {
-    display: block; /* メニューアイコンを表示 */
+    display: block;
   }
 
   .menu-items {
-    width: 100%; /* メニューの幅を100%に */
-    left: -100%; /* 初期状態では画面外に隠す */
-    z-index: 1; /* メニューをトップに */
+    width: 100%;
+    left: -100%;
+    z-index: 1;
   }
 
   .menu-items.show-menu {
-    left: 0; /* メニューを表示する位置に移動 */
-
+    left: 0;
   }
 
   .menu-items li {
-    margin: 10px 0;
+    margin: 0;
   }
 }
