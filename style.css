@@ -142,6 +142,9 @@ nav {
   display: block;
 }
 
+iframe{
+  margin: auto;
+}
 @media screen and (max-width: 768px) {
   /* スマートフォン向けのスタイル調整 */
   body {
