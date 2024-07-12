@@ -1,56 +1,77 @@
-body, html {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        nav {
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
-        .menu-icon {
-            display: inline-block;
-            cursor: pointer;
-        }
-        .bar {
-            width: 30px;
-            height: 3px;
-            background-color: #ff6600;
-            margin: 6px 0;
-        }
-        .notice {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            width: 100%;
-        }
-        .notice-item {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        .notice-item h2 {
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 5px;
-        }
-        .notice-item p {
-            margin: 5px 0;
-            line-height: 1.5;
-            text-align: center;
-        }
+/* Notes.css */
+
+/* グローバル設定 */
+body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* 注意事項全体のスタイル */
+.notice {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    margin: 80px auto 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* 見出し1のスタイル */
+.notice h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+/* アニメーション */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 個別の注意事項アイテムのスタイル */
+.notice-item {
+    margin-bottom: 20px;
+}
+
+/* 見出し2のスタイル */
+.notice-item h2 {
+    font-size: 1.8em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* パラグラフのスタイル */
+.notice-item p {
+    margin: 5px 0;
+    color: #666;
+    line-height: 1.5;
+}
