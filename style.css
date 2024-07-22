@@ -1,5 +1,3 @@
-/* style.css */
-
 body {
   display: flex;
   flex-direction: column;
@@ -33,33 +31,58 @@ ul li a {
   color: black;
   padding: 10px;
   transition: background-color 0.8s ease;
+  font-size: 2.1vw;
 }
 
 ul li a:hover {
   background-color: #FFA500;
 }
 
-.parent {
+.image-container {
+  position: relative;
   text-align: center;
-  margin-top: 20px;
-  max-width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;
+  margin: auto;
 }
 
-img {
+.image-container img {
   max-width: 100%;
   height: auto;
+
+  filter: brightness(50%);
 }
 
-table {
-  margin: 20px auto;
-  width: 40%;
+.image-container h1, .image-container .theme {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+
 }
 
-th, td {
-  padding: 8px 12px;
-  text-align: left;
+.image-container h1 {
+  top: 20%;
+  font-size: 8vw; /* ビューポート幅に基づくフォントサイズ */
+}
+
+.image-container .theme {
+  top: 40%;
+  text-align: center;
+}
+
+.image-container .theme h2 {
+  font-size: 5.1vw; /* ビューポート幅に基づくフォントサイズ */
+  margin-top: 50px;
+}
+
+.image-container .theme p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+h3 {
+  margin-top: 20px;
 }
 
 nav {
@@ -75,6 +98,7 @@ nav {
   position: fixed;
   top: 10px;
   left: 5px;
+  z-index: 1000;
 }
 
 .bar {
@@ -96,6 +120,7 @@ nav {
   height: 100vh;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
   transition: right 0.3s ease;
+  z-index: 999;
 }
 
 .menu-items.show-menu {
@@ -127,7 +152,7 @@ nav {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1000;
   color: #FFA500;
   width: 30px;
   height: 25px;
@@ -141,30 +166,28 @@ nav {
 .show-close .close-icon {
   display: block;
 }
+.show-close .menu-icon {
+  display: none;
+}
 
-iframe{
+iframe {
   margin: auto;
 }
+
 @media screen and (max-width: 768px) {
-  /* スマートフォン向けのスタイル調整 */
   body {
-    font-size: 15px; /* 文字サイズを調整 */
+    font-size: 15px;
   }
 
-  h1{
+  h1 {
     margin-top: 20px;
-    font-size: 26px;
+    font-size: 8vw; /* スマホ用のフォントサイズ */
     text-align: center;
   }
 
-  .parent {
-    text-align: center;
-    margin-top: 20px;
-    max-width: 73%;
-    margin-left: auto;
-    margin-right: auto;
+  .image-container {
+    max-width: 100%;
   }
-
 
   .menu-icon {
     display: block;
