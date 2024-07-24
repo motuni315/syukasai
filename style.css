@@ -8,9 +8,21 @@ body {
   min-height: 100vh;
 }
 
+.dates {
+  border: 0.5px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 100px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 4vw;
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
+}
+
 li {
   list-style: none;
   margin-bottom: 30px;
+  padding: 0 10px;
 }
 
 ul {
@@ -21,21 +33,48 @@ ul {
   margin-top: 20px;
 }
 
+ul.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px; /* アイテム間のスペースを追加 */
+}
+
 ul li {
   margin-bottom: 10px;
   text-align: center;
 }
 
-ul li a {
+ul.menu li {
+  margin: 16px; /* マージンを増加 */
+  flex: 1 1 calc(40% - 40px); /* 幅を調整してスペースを確保 */
+  box-sizing: border-box;
+  font-size: 4.2vw;
+  border: 0.5px solid black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 40px 0;
+}
+
+ul.menu li a {
+  text-decoration: none;
+  color: black;
+  line-height: 1.5; /* 行間の調整 */
+  text-align: center; /* テキストを中央に配置 */
+  padding: 40px 0; /* パディングを追加 */
+  box-sizing: border-box;
+}
+ul.menu li:hover {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
+  transition: background-color 0.3s ease; /* 色の変更にアニメーションを追加 */
+}
+
+ul.menu-items li a {
   text-decoration: none;
   color: black;
   padding: 10px;
   transition: background-color 0.8s ease;
   font-size: 2.1vw;
-}
-
-ul li a:hover {
-  background-color: #FFA500;
 }
 
 .image-container {
@@ -48,17 +87,16 @@ ul li a:hover {
 .image-container img {
   max-width: 100%;
   height: auto;
-
   filter: brightness(50%);
 }
 
-.image-container h1, .image-container .theme {
+.image-container h1,
+.image-container .theme {
   position: absolute;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
   color: white;
-
 }
 
 .image-container h1 {
@@ -166,6 +204,7 @@ nav {
 .show-close .close-icon {
   display: block;
 }
+
 .show-close .menu-icon {
   display: none;
 }
@@ -181,7 +220,7 @@ footer {
   text-align: center; /* 文字を中央に配置 */
   position: relative; /* 必要に応じて位置を調整 */
   bottom: 0; /* フッターをページの下部に固定 */
-  width: 100%; /* 幅を100%に設定 */
+  width: auto; /* 幅を100%に設定 */
 }
 
 @media screen and (max-width: 768px) {
