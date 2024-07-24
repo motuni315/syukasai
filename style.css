@@ -113,7 +113,7 @@ nav {
   padding: 0;
   margin: 0;
   display: none;
-  background-color: orangered;
+  background-color: white;
   position: fixed;
   left: -100%;
   width: 225px;
@@ -172,6 +172,16 @@ nav {
 
 iframe {
   margin: auto;
+}
+
+footer {
+  background-color: #FFA500;
+  color: white; /* 文字を白に設定 */
+  padding: 10px; /* 適切なパディングを追加 */
+  text-align: center; /* 文字を中央に配置 */
+  position: relative; /* 必要に応じて位置を調整 */
+  bottom: 0; /* フッターをページの下部に固定 */
+  width: 100%; /* 幅を100%に設定 */
 }
 
 @media screen and (max-width: 768px) {
