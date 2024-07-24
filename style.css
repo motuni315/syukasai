@@ -16,7 +16,7 @@ body {
   display: inline-block;
   margin: 10px;
   font-size: 4vw;
-  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
+  background-color: #ffffff;
 }
 
 li {
@@ -37,7 +37,7 @@ ul.menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2px; /* アイテム間のスペースを追加 */
+   /* アイテム間のスペースを追加 */
 }
 
 ul li {
@@ -45,29 +45,25 @@ ul li {
   text-align: center;
 }
 
-ul.menu li {
+ul.menu button {
+  width: 30vw; /* ボタンの幅を固定 */
+  height: 18vh;
   margin: 16px; /* マージンを増加 */
-  flex: 1 1 calc(40% - 40px); /* 幅を調整してスペースを確保 */
+  flex: 1 1 calc(50% - 10px); /* 2列にするための幅設定 */
   box-sizing: border-box;
-  font-size: 4.2vw;
-  border: 0.5px solid black;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 4vw;
+  border: 0px solid black; /* 枠線を細く設定 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  padding: 40px 0;
-}
-
-ul.menu li a {
+  padding: 10px 5px;
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
   text-decoration: none;
-  color: black;
+  color: white;
   line-height: 1.5; /* 行間の調整 */
   text-align: center; /* テキストを中央に配置 */
-  padding: 40px 0; /* パディングを追加 */
-  box-sizing: border-box;
+  cursor: pointer;
 }
-ul.menu li:hover {
-  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
-  transition: background-color 0.3s ease; /* 色の変更にアニメーションを追加 */
-}
+
 
 ul.menu-items li a {
   text-decoration: none;
@@ -256,4 +252,7 @@ footer {
   .menu-items li {
     margin: 0;
   }
+}
+ul.menu button {
+  flex: 1 1 calc(50% - 32px); /* スマホ画面でも2列に表示 */
 }
