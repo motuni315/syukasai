@@ -1,3 +1,4 @@
+/* General body styles */
 body {
   display: flex;
   flex-direction: column;
@@ -8,6 +9,46 @@ body {
   min-height: 100vh;
 }
 
+/* Top navigation bar styles */
+.top-nav {
+  background-color: #FFFFFF; /* ナビゲーションバーの背景色 */
+  padding: 10px 0; /* 上下のパディング */
+  position: fixed; /* 固定位置 */
+  top: 0; /* 上端に配置 */
+  width: 100%; /* 横幅を全体に広げる */
+  z-index: 1000; /* 他の要素より前面に表示 */
+}
+
+/* ナビゲーションバーのリストスタイル */
+.top-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* 中央に配置 */
+}
+
+.top-nav li {
+  margin: 0 15px; /* リストアイテムの左右マージン */
+}
+
+/* ナビゲーションバーのリンクスタイル */
+.top-nav a {
+  color: black; /* テキスト色 */
+  text-decoration: none; /* 下線を削除 */
+  font-size: 1.2rem; /* フォントサイズ */
+  padding: 10px 15px; /* パディング */
+  display: inline-block; /* インラインブロックでサイズ調整 */
+}
+
+/* ナビゲーションバーのリンクホバー時のスタイル */
+.top-nav a:hover {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5)); /* グラデーション背景 */
+  color: black; /* テキスト色（背景と同じにして視認性を保つ） */
+  border-radius: 5px; /* 角を丸める */
+}
+
+/* Styles for the dates */
 .dates {
   border: 0.5px solid black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -19,12 +60,14 @@ body {
   background-color: #ffffff;
 }
 
+/* List item styles */
 li {
   list-style: none;
   margin-bottom: 30px;
   padding: 0 10px;
 }
 
+/* Unordered list styles */
 ul {
   list-style: none;
   padding: 0;
@@ -33,46 +76,43 @@ ul {
   margin-top: 20px;
 }
 
+/* Menu styles */
 ul.menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-   /* アイテム間のスペースを追加 */
 }
 
-ul li {
-  margin-bottom: 10px;
-  text-align: center;
-}
-
+/* Menu item styles */
 ul.menu button {
-  width: 30vw; /* ボタンの幅を固定 */
+  width: 30vw;
   height: 18vh;
-  margin: 16px; /* マージンを増加 */
-  flex: 1 1 calc(50% - 10px); /* 2列にするための幅設定 */
+  margin: 16px;
+  flex: 1 1 calc(50% - 10px);
   box-sizing: border-box;
   font-size: 4vw;
-  border: 0px solid black; /* 枠線を細く設定 */
+  border: 0px solid black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   padding: 10px 5px;
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
   text-decoration: none;
   color: white;
-  line-height: 1.5; /* 行間の調整 */
-  text-align: center; /* テキストを中央に配置 */
+  line-height: 1.5;
+  text-align: center;
   cursor: pointer;
 }
 
-
+/* Menu item link styles */
 ul.menu-items li a {
   text-decoration: none;
   color: black;
   padding: 10px;
   transition: background-color 0.8s ease;
-  font-size: 2.1vw;
+  font-size: 2vw;
 }
 
+/* Image container styles */
 .image-container {
   position: relative;
   text-align: center;
@@ -97,7 +137,7 @@ ul.menu-items li a {
 
 .image-container h1 {
   top: 20%;
-  font-size: 8vw; /* ビューポート幅に基づくフォントサイズ */
+  font-size: 8vw;
 }
 
 .image-container .theme {
@@ -106,7 +146,7 @@ ul.menu-items li a {
 }
 
 .image-container .theme h2 {
-  font-size: 5.1vw; /* ビューポート幅に基づくフォントサイズ */
+  font-size: 5.1vw;
   margin-top: 50px;
 }
 
@@ -115,14 +155,17 @@ ul.menu-items li a {
   margin-top: 0.5rem;
 }
 
+/* Heading styles */
 h3 {
   margin-top: 20px;
 }
 
+/* Navigation styles */
 nav {
   position: relative;
 }
 
+/* Menu icon styles */
 .menu-icon {
   width: 30px;
   height: 25px;
@@ -138,10 +181,11 @@ nav {
 .bar {
   width: 100%;
   height: 4px;
-  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.9), rgba(255, 99, 71, 0.9));
   margin: 4px 0;
 }
 
+/* Menu items styles */
 .menu-items {
   list-style: none;
   padding: 0;
@@ -153,7 +197,7 @@ nav {
   width: 225px;
   height: 100vh;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.8);
-  transition: right 0.3s ease;
+  transition: left 0.3s ease;
   z-index: 999;
 }
 
@@ -182,12 +226,15 @@ nav {
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
 }
 
+/* Close icon styles */
 .close-icon {
   display: none;
   font-size: 30px;
   cursor: pointer;
   z-index: 1000;
-  color: #FFA500;
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.9), rgba(255, 99, 71, 0.9));
+  -webkit-background-clip: text;
+  color: transparent;
   width: 30px;
   height: 25px;
   margin: 10px;
@@ -205,41 +252,50 @@ nav {
   display: none;
 }
 
+/* Iframe styles */
 iframe {
   margin: auto;
 }
 
+/* Footer styles */
 footer {
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
-  color: white; /* 文字を白に設定 */
-  padding: 10px; /* 適切なパディングを追加 */
-  text-align: center; /* 文字を中央に配置 */
-  position: relative; /* 必要に応じて位置を調整 */
-  bottom: 0; /* フッターをページの下部に固定 */
-  width: auto; /* 幅を100%に設定 */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: auto;
 }
 
+/* Responsive styles */
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 15px;
+  /* ナビゲーションバー */
+  .top-nav {
+    padding: 5px 0; /* 上下のパディングを減らす */
   }
 
-  h1 {
-    margin-top: 20px;
-    font-size: 8vw; /* スマホ用のフォントサイズ */
-    text-align: center;
+  .top-nav ul {
+    flex-direction: row; /* 縦並びにする */
   }
 
-  .image-container {
-    max-width: 100%;
+  .top-nav li {
+    margin: 5px 0; /* リストアイテムの上下マージンを調整 */
   }
 
+  .top-nav a {
+    font-size: 1.5vw; /* フォントサイズを小さく */
+    padding: 8px 10px; /* パディングを調整 */
+  }
+
+  /* メニューアイコン */
   .menu-icon {
-    display: block;
+    display: block; /* モバイルでは表示 */
   }
 
+  /* メニューアイテム */
   .menu-items {
-    width: 100%;
+    width: 100%; /* 幅を100%に設定 */
     left: -100%;
     margin: 0;
     z-index: 1;
@@ -249,10 +305,30 @@ footer {
     left: 0;
   }
 
-  .menu-items li {
-    margin: 0;
+  /* メニューアイテムのリンク */
+  .menu-items li a {
+    font-size: 3vw; /* フォントサイズを調整 */
+    padding: 12px 0; /* パディングを調整 */
+  }
+
+  /* メニューアイテムボタン */
+  ul.menu button {
+    flex: 1 1 100%; /* 幅を100%にする */
+    font-size: 3vw; /* フォントサイズを調整 */
   }
 }
-ul.menu button {
-  flex: 1 1 calc(50% - 32px); /* スマホ画面でも2列に表示 */
+
+/* Responsive styles for the image container and headings */
+@media screen and (max-width: 480px) {
+  .image-container h1 {
+    font-size: 6vw; /* フォントサイズを調整 */
+  }
+
+  .image-container .theme h2 {
+    font-size: 4vw; /* フォントサイズを調整 */
+  }
+
+  .dates {
+    font-size: 3vw; /* フォントサイズを調整 */
+  }
 }
