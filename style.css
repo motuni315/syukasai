@@ -208,6 +208,22 @@ th, td {
   font-weight: bold;
 }
 
+.contact {
+  font-size: 1.5vw;
+}
+/* メールアドレスの見た目とホバー時のスタイルを追加 */
+#email {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  margin: 60px;
+}
+
+#email:hover {
+  color: darkblue;
+}
+
+
 /* Footer styles */
 footer {
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
