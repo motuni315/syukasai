@@ -49,7 +49,7 @@ body {
 }
 
 h1 {
-  margin-top: auto;
+  margin-top: 120px;
 }
 
 /* Styles for the dates */
@@ -165,6 +165,28 @@ nav {
   position: relative;
 }
 
+/*tableタグ*/
+.table {
+  display: grid;
+  justify-content: center; /* 中央に配置 */
+  margin: 20px 0; /* 上のマージンを追加 */
+}
+
+table {
+  border-collapse: collapse; /* ボーダーの重なりを解消 */
+  width: 80%; /* テーブルの幅を80%に設定 */
+  margin: 0 auto; /* テーブルを中央に配置 */
+  background-color: #ffffff; /* 背景色を設定 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
+}
+
+th, td {
+  border: 1px solid #dddddd; /* ボーダーを追加 */
+  text-align: center; /* テキストを中央に配置 */
+  padding: 8px; /* パディングを追加 */
+
+}
+
 /* Iframe styles */
 iframe {
   margin: auto;
@@ -207,6 +229,10 @@ footer {
     font-size: 3vw; /* フォントサイズを調整 */
   }
 }
+table {
+  width: 100%; /* 幅を100%に設定 */
+}
+
 
 /* Responsive styles for the image container and headings */
 @media screen and (max-width: 480px) {
@@ -223,5 +249,9 @@ footer {
   }
   ul .menu button {
     height: 10vh;
+  }
+  th, td {
+    font-size: 0.8rem; /* フォントサイズを小さくする */
+    padding: 4px; /* パディングを調整 */
   }
 }
