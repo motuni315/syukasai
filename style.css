@@ -184,12 +184,8 @@ th, td {
   border: 1px solid #dddddd; /* ボーダーを追加 */
   text-align: center; /* テキストを中央に配置 */
   padding: 8px; /* パディングを追加 */
+  font-size: 1rem;
 
-}
-
-/* Iframe styles */
-iframe {
-  margin: auto;
 }
 
 /* Footer styles */
@@ -201,10 +197,15 @@ footer {
   position: relative;
   bottom: 0;
   width: auto;
+  font-size: 0.6rem;
 }
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+  h1 {
+    margin-top: 80px;
+    font-size: 1rem;
+  }
   /* ナビゲーションバー */
   .top-nav {
     padding: 5px 0; /* 上下のパディングを減らす */
@@ -254,4 +255,5 @@ table {
     font-size: 0.8rem; /* フォントサイズを小さくする */
     padding: 4px; /* パディングを調整 */
   }
+
 }
