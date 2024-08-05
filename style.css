@@ -141,7 +141,7 @@ ul.menu button:hover{
 }
 
 .image-container .theme {
-  top: 40%;
+  top: 55%;
   text-align: center;
 }
 
@@ -216,7 +216,7 @@ th, td {
   cursor: pointer;
   color: blue;
   text-decoration: underline;
-  margin: 60px;
+  margin: 70px;
 }
 
 #email:hover {
@@ -238,6 +238,7 @@ footer {
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+
   h1 {
     margin-top: 80px;
     font-size: 1rem;
@@ -265,20 +266,29 @@ footer {
     flex: 1 1 100%; /* 幅を100%にする */
     font-size: 3vw; /* フォントサイズを調整 */
   }
-}
-table {
-  width: 100%; /* 幅を100%に設定 */
+  .image-container h1 {
+    font-size: 6vw; /* フォントサイズを調整 */
+  }
+
+  .image-container .theme h2 {
+    font-size: 5vw; /* フォントサイズを調整 */
+  }
 }
 
 
 /* Responsive styles for the image container and headings */
 @media screen and (max-width: 480px) {
   .image-container h1 {
-    font-size: 6vw; /* フォントサイズを調整 */
+    font-size: 7vw; /* フォントサイズを調整 */
+    top: 10%;
   }
 
   .image-container .theme h2 {
-    font-size: 4vw; /* フォントサイズを調整 */
+    font-size: 6vw; /* フォントサイズを調整 */
+    top: 10%;
+  }
+  .image-container .theme {
+    top: 40%;
   }
 
   .dates {
