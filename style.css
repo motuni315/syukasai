@@ -106,8 +106,8 @@ ul.menu button {
   cursor: pointer;
 }
 
-ul.menu button:hover{
-  background-color: #97ffff;
+ul.menu button:hover {
+  background-image: linear-gradient(to left, #afff9f, #c7fff0);
 }
 
 
