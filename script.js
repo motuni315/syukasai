@@ -1,18 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const emailElement = document.getElementById('email');
+  const telElement = document.getElementById('tel');
 
-  emailElement.addEventListener('click', function() {
-    // メールアドレスをクリップボードにコピーする
-    const email = emailElement.textContent;
-    navigator.clipboard.writeText(email).then(function() {
-      alert('メールアドレスがコピーされました: ' + email);
+  telElement.addEventListener('click', function() {
+    // 電話番号をクリップボードにコピーする
+    const tel = telElement.textContent;
+    navigator.clipboard.writeText(tel).then(function() {
+      alert('電話番号がコピーされました: ' + tel);
     }).catch(function(error) {
       console.error('コピーに失敗しました: ', error);
     });
   });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
   const links = document.querySelectorAll('a[href^="#"]');
   for (const link of links) {
     link.addEventListener("click", function(e) {
