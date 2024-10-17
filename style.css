@@ -223,6 +223,10 @@ th, td {
   color: darkblue;
 }
 
+.greeting p {
+  font-size: 1.5vw;
+}
+
 
 /* Footer styles */
 footer {
