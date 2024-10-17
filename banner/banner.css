@@ -14,31 +14,20 @@ body {
     max-width: 800px;
     margin: 0 auto;
   }
-.title {
+.banner-title {
     width: 18cm;
     text-align: center;
-    font-size: 24px;
+    font-size: 3vw;
     font-weight: bold;
     margin-bottom: 1cm;
+
 }
-.banner-container {
-   width: 140mm;
-    height: 75mm;
-    border: 1px solid #000;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.banner-placeholder {
-    width: 100%;
-    height: 100%;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #666;
+
+.banner-placeholder img {
+  max-width: 100%; /* コンテナの幅に収める */
+  max-height: 100%; /* コンテナの高さに収める */
+  object-fit: contain;
+  border: 1px solid black;
 }
 .appeal-points {
     width: 18cm;
