@@ -261,14 +261,15 @@ footer {
   }
 
   .top-nav a {
-    font-size: 1vw; /* フォントサイズを小さく */
+    font-size: 1.5vw; /* フォントサイズを小さく */
     padding: 8px 10px; /* パディングを調整 */
   }
 
   /* メニューアイテムボタン */
   ul.menu button {
-    flex: 1 1 100%; /* 幅を100%にする */
-    font-size: 3vw; /* フォントサイズを調整 */
+    width: 30vw; /* 小さな画面ではボタンを少し広めに */
+    height: 18vh; /* 高さも比例して調整 */
+    font-size: 3.5vw; /* フォントサイズを少し小さく調整 */
   }
   .image-container h1 {
     font-size: 6vw; /* フォントサイズを調整 */
@@ -298,8 +299,10 @@ footer {
   .dates {
     font-size: 3vw; /* フォントサイズを調整 */
   }
-  ul .menu button {
-    height: 10vh;
+  ul.menu button {
+    width: 25vw; /* とても小さな画面では幅をほぼ全体に広げる */
+    height: 18vw; /* 高さはそのまま */
+    font-size: 3vw; /* フォントサイズをさらに調整 */
   }
   th, td {
     font-size: 0.8rem; /* フォントサイズを小さくする */
