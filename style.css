@@ -211,20 +211,14 @@ th, td {
 .contact {
   font-size: 1.5vw;
 }
-/* メールアドレスの見た目とホバー時のスタイルを追加 */
-#tel {
-  cursor: pointer;
-  color: blue;
-  text-decoration: underline;
-  margin: 70px;
-}
-
-#tel:hover {
-  color: darkblue;
-}
 
 .greeting p {
   font-size: 1.5vw;
+}
+
+.floor-map img{
+  height: auto;
+  width: 80%;
 }
 
 
