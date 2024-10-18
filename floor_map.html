@@ -18,20 +18,36 @@
     <li><a href="access.html">アクセス</a></li>
   </ul>
 </nav>
+
+<div class="class-list">
+  <h2>教室</h2>
+  <ul>
+    <li><a href="#" onclick="highlightRoom('4N1',event)">4N1</a></li>
+    <li><a href="#" onclick="highlightRoom('4N2',event)">4N2</a></li>
+    <li><a href="#" onclick="highlightRoom('4N3',event)">4N3</a></li>
+    <li><a href="#" onclick="highlightRoom('4S1',event)">4S1</a></li>
+    <li><a href="#" onclick="highlightRoom('4S2',event)">4S2</a></li>
+    <li><a href="#" onclick="highlightRoom('4S3',event)">4S3</a></li>
+    <li><a href="#" onclick="highlightRoom('4S4',event)">4S4</a></li>
+  </ul>
+</div>
+
+
 <h1>フロアマップ<br></h1>
 <h2>4F</h2>
 
 <div class="floor-map">
-<img src="image/4F.png" usemap="#ImageMap" alt="4F" />
-<map name="ImageMap">
-  <area shape="rect" coords="534,195,774,329" href="#" alt="4N1" />
-  <area shape="rect" coords="777,195,996,329" href="#" alt="4N2" />
-  <area shape="poly" coords="999,196,1000,327,1096,328,1124,316,1146,291,1152,253,1144,227,1122,205,1097,195,1088,195" href="#" alt="4N3" />
-  <area shape="poly" coords="277,534,277,403,190,403,163,411,145,428,134,445,129,466,133,490,151,516,168,529,186,534,186,534" href="#" alt="4S1" />
-  <area shape="rect" coords="282,403,457,536" href="banner/banner_R1A2_4S2.html" alt="4S2" />
-  <area shape="rect" coords="555,403,754,536" href="#" alt="4S3" />
-  <area shape="rect" coords="757,403,954,536" href="#" alt="4S4" />
-</map>
+<img src="image/4F_企画名.png" usemap="#ImageMap" alt="4F" />
+  <map name="ImageMap">
+  <area shape="rect" coords="442,36,684,169" href="#" alt="4N1" id="4N1" />
+  <area shape="rect" coords="687,37,905,169" href="#" alt="4N2" id="4N2" />
+  <area shape="poly" coords="910,38,1005,35,1028,42,1044,52,1057,68,1066,100,1059,130,1045,148,1030,160,1006,168,909,168,910,38,910,37" href="#" alt="4N3" id="4N3" />
+  <area shape="poly" coords="187,243,101,243,80,247,58,262,46,279,40,299,40,312,45,340,66,362,92,374,188,375,188,375" href="#" alt="4S1" id="4S1" />
+  <area shape="rect" coords="192,243,366,376" href="#" alt="4S2" id="4S2" />
+  <area shape="rect" coords="465,244,664,376" href="#" alt="4S3" id="4S3" />
+  <area shape="rect" coords="667,243,864,377" href="#" alt="4S4" id="4S4" />
+  </map>
+
 
 <h2>5F</h2>
 
