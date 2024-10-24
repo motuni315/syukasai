@@ -22,23 +22,9 @@
 <div class="class-list">
   <h2>教室</h2>
   <ul>
-    <li><a href="#" onclick="highlightRoom('4N1',event)">4N1</a></li>
-    <li><a href="#" onclick="highlightRoom('4N2',event)">4N2</a></li>
-    <li><a href="#" onclick="highlightRoom('4N3',event)">4N3</a></li>
-    <li><a href="#" onclick="highlightRoom('4S1',event)">4S1</a></li>
-    <li><a href="#" onclick="highlightRoom('4S2',event)">4S2</a></li>
-    <li><a href="#" onclick="highlightRoom('4S3',event)">4S3</a></li>
-    <li><a href="#" onclick="highlightRoom('4S4',event)">4S4</a></li>
-    <li><a href="#" onclick="highlightRoom('5N2',event)">5N2</a></li>
-    <li><a href="#" onclick="highlightRoom('5N3',event)">5N3</a></li>
-    <li><a href="#" onclick="highlightRoom('5S2',event)">5S2</a></li>
-    <li><a href="#" onclick="highlightRoom('6N1',event)">6N1</a></li>
-    <li><a href="#" onclick="highlightRoom('6N2',event)">6N2</a></li>
-    <li><a href="#" onclick="highlightRoom('6N3',event)">6N3</a></li>
-    <li><a href="#" onclick="highlightRoom('6S1',event)">6S1</a></li>
-    <li><a href="#" onclick="highlightRoom('6S2',event)">6S2</a></li>
-    <li><a href="#" onclick="highlightRoom('6S3',event)">6S3</a></li>
-    <li><a href="#" onclick="highlightRoom('6S4',event)">6S4</a></li>
+    <li><a href="#" onclick="scrollToFloor('floor-4F', event)">4F</a></li>
+    <li><a href="#" onclick="scrollToFloor('floor-5F', event)">5F</a></li>
+    <li><a href="#" onclick="scrollToFloor('floor-6F', event)">6F</a></li>
   </ul>
 </div>
 
@@ -47,7 +33,7 @@
 <h2>4F</h2>
 
 <div class="floor-map">
-<img src="image/4F_企画名.png" usemap="#ImageMap4F" alt="4F" />
+<img src="image/4F_企画名.png" usemap="#ImageMap4F" alt="4F" id="floor-4F" />
   <map name="ImageMap4F">
   <area shape="rect" coords="442,36,684,169" href="#" alt="4N1" id="4N1" />
   <area shape="rect" coords="687,37,905,169" href="#" alt="4N2" id="4N2" />
@@ -60,7 +46,7 @@
 
 
 <h2>5F</h2>
-  <img src="image/5F_企画名.png" usemap="#ImageMap5F" alt="5F" />
+  <img src="image/5F_企画名.png" usemap="#ImageMap5F" alt="5F" id="floor-5F" />
   <map name="ImageMap5F">
     <area shape="rect" coords="551,36,806,169" href="#" alt="5N2" id="5N2" />
     <area shape="poly" coords="811,37,810,36,1006,37,1027,42,1043,52,1059,71,1065,93,1066,111,1058,132,1051,144,1038,158,1011,169,810,170,810,78" href="#" alt="5N3" id="5N3" />
@@ -68,7 +54,7 @@
   </map>
 
 <h2>6F</h2>
-  <img src="image/6F_企画名.png" usemap="#ImageMap6F" alt="6F" />
+  <img src="image/6F_企画名.png" usemap="#ImageMap6F" alt="6F" id="floor-6F" />
   <map name="ImageMap6F">
     <area shape="rect" coords="444,36,616,169" href="#" alt="6N1" id="6N1" />
     <area shape="rect" coords="621,36,824,170" href="#" alt="6N2" id="6N2" />

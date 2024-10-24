@@ -1,14 +1,9 @@
-function highlightRoom(roomId) {
-
+function scrollToFloor(floorId, event) {
   event.preventDefault();
-  // すでにハイライトされている教室を解除
-  document.querySelectorAll('.highlight').forEach(area => {
-    area.classList.remove('highlight');
-  });
 
-  // 指定された教室をハイライト
-  const room = document.getElementById(roomId);
-  if (room) {
-    room.classList.add('highlight');
+  // 指定されたフロアにスクロール
+  const floor = document.getElementById(floorId);
+  if (floor) {
+    floor.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 }
