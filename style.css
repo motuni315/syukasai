@@ -103,9 +103,13 @@ ul {
 }
 
 ul.menu {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列 */
+  gap: 10px; /* ボタン間のスペース */
   justify-content: center;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 
 /* Menu item styles */
