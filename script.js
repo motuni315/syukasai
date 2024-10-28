@@ -34,3 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 3秒ごとにスライドを切り替え
   setInterval(nextSlide, 3000);
 });
+function toggleNav() {
+  const nav = document.querySelector('.top-nav');
+  nav.classList.toggle('active');
+}
