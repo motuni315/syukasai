@@ -39,4 +39,6 @@ function toggleNav() {
   nav.classList.toggle('active');
 }
 
-document.addEventListener("contextmenu", event => event.preventDefault());
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("contextmenu", event => event.preventDefault());
+});
