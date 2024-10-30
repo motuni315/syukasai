@@ -38,3 +38,5 @@ function toggleNav() {
   const nav = document.querySelector('.top-nav');
   nav.classList.toggle('active');
 }
+
+document.addEventListener("contextmenu", event => event.preventDefault());
