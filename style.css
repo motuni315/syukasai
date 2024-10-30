@@ -148,7 +148,6 @@ ul.menu button:hover {
 }
 
 .image-container img {
-  margin-top: 7%;
   max-width: 100%;
   height: auto;
   filter: brightness(50%);
