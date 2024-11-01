@@ -1,3 +1,4 @@
+// フロアへのスムーズスクロール
 function scrollToFloor(floorId, event) {
   event.preventDefault();
 
@@ -8,8 +9,15 @@ function scrollToFloor(floorId, event) {
   }
 }
 
-// script.js
+// ナビゲーションの表示/非表示切り替え
+function toggleNav() {
+  const nav = document.querySelector('.top-nav');
+  nav.classList.toggle('active');
+}
+
+// DOMContentLoaded イベントが発生した時にスライドショーやコンテキストメニュー制御を初期化
 document.addEventListener("DOMContentLoaded", () => {
+  // スライドショーの設定
   const slides = document.querySelectorAll(".slideshow img");
   let currentIndex = 0;
 
@@ -29,16 +37,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 初期表示
-  showSlide(currentIndex);
+  if (slides.length > 0) {
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); // 3秒ごとにスライドを切り替え
+  }
 
-  // 3秒ごとにスライドを切り替え
-  setInterval(nextSlide, 3000);
-});
-function toggleNav() {
-  const nav = document.querySelector('.top-nav');
-  nav.classList.toggle('active');
-}
-
-document.addEventListener("DOMContentLoaded", () => {
+  // 右クリックのコンテキストメニューを無効化
   document.addEventListener("contextmenu", event => event.preventDefault());
 });
