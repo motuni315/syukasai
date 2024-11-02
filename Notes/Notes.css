@@ -10,48 +10,9 @@ body {
     line-height: 1.6;
 }
 
-.table-of-contents {
-  position: fixed;
-  margin-top: 100px ;
-  left: 20px;
-  min-width: 200px;
-  width: auto;
-  background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
-  padding: 10px;
-  border-right: 1px solid #ccc;
-  height: auto;
-  overflow-y: auto;
-}
-
-.table-of-contents h1 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.table-of-contents ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-}
-
-.table-of-contents li {
-  margin-bottom: 20px;
-}
-
-.table-of-contents a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.table-of-contents a:hover {
-  color: rgba(0, 0, 0, 0.4);
-}
-
 /* 注意事項セクション */
 
 .notice h1 {
-
     margin-bottom: 20px;
     color: #000000;
     text-align: center;

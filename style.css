@@ -12,19 +12,16 @@ body {
 .slideshow {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 65vw; /* 画面の高さに合わせる */
   margin: 0 auto;
   overflow: hidden;
   filter: brightness(50%);
-
 }
 
 .slideshow img {
   width: 100%;
   display: none;
   transition: opacity 1s ease-in-out;
-
-
 }
 
 .slideshow img.active {
@@ -32,59 +29,53 @@ body {
   opacity: 1;
 }
 
-
 /* Top navigation bar styles */
 .top-nav {
   background: rgba(255, 255, 255, 0.8);
-  padding: 10px 0; /* 上下のパディング */
-  position: fixed; /* 固定位置 */
-  top: 0; /* 上端に配置 */
-  width: 100%; /* 横幅を全体に広げる */
-  z-index: 1000; /* 他の要素より前面に表示 */
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-/* ナビゲーションバーのリストスタイル */
+/* Navigation bar styles */
 .top-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center; /* 中央に配置 */
+  justify-content: center;
 }
 
 .top-nav li {
-  margin: 0 15px; /* リストアイテムの左右マージン */
+  margin: 0 15px;
 }
 
-/* ナビゲーションバーのリンクスタイル */
 .top-nav a {
-  color: black; /* テキスト色 */
-  text-decoration: none; /* 下線を削除 */
-  font-size: 1.2rem; /* フォントサイズ */
-  padding: 10px 15px; /* パディング */
-  display: inline-block; /* インラインブロックでサイズ調整 */
+  color: black;
+  text-decoration: none;
+  font-size: 2vw;
+  padding: 10px 15px;
+  display: inline-block;
 }
 
-/* ナビゲーションバーのリンクホバー時のスタイル */
 .top-nav a:hover {
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
-  color: black; /* テキスト色 */
-  border-radius: 5px; /* 角を丸める */
+  color: black;
+  border-radius: 5px;
 }
 
 
-h1 {
-  margin-top: 100px;
-}
 
 /* Styles for the dates */
 .dates {
-  border: 0.5px solid black;
+  border: 2px solid black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 5px;
-  border-radius: 100px;
+  border-radius: 50px;
   display: inline-block;
-  margin: 10px;
+  margin: 2vw 6vw;
   font-size: 4vw;
   background-color: #ffffff;
 }
@@ -107,12 +98,11 @@ ul {
 
 ul.menu {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2列 */
-  gap: 10px; /* ボタン間のスペース */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
   justify-content: center;
   margin-top: 20px;
   padding: 0;
-  list-style: none;
 }
 
 /* Menu item styles */
@@ -120,7 +110,6 @@ ul.menu button {
   width: 30vw;
   height: 18vh;
   margin: 16px;
-  flex: 1 1 calc(50% - 10px);
   box-sizing: border-box;
   font-size: 4vw;
   border: 0 solid black;
@@ -136,10 +125,8 @@ ul.menu button {
 }
 
 ul.menu button:hover {
-  background-image: linear-gradient(to left, rgba(175, 255, 159, 0.5), rgba(199, 255, 240, 0.5)); /* 半透明の背景 */
+  background-image: linear-gradient(to left, rgba(175, 255, 159, 0.5), rgba(199, 255, 240, 0.5));
 }
-
-
 
 /* Image container styles */
 .image-container {
@@ -154,29 +141,32 @@ ul.menu button:hover {
   height: auto;
 }
 
-.image-container h1,
-.image-container .theme {
-  position: absolute;
-  width: 100%;
+
+.image-container h1 {
+  position: absolute; /* 位置を絶対配置に */
+  top: 25vw; /* 画像の中心に配置 */
   left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
+  color: white;
+  transform: translate(-50%, -50%); /* 中心に移動 */
+  font-size: 7vw; /* フォントサイズを調整 */
+}
+
+.image-container h2 {
+  position: absolute;
+  top: 35vw;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%); /* 中心に移動 */
+  font-size: 7vw; /* フォントサイズを調整 */
   color: white;
 }
 
-.image-container h1 {
-  top: 20%;
-  font-size: 8vw;
-}
-
 .image-container .theme {
-  top: 55%;
   text-align: center;
 }
 
-.image-container .theme h2 {
-  font-size: 5.1vw;
-  margin-top: 50px;
-}
+
 
 .image-container .theme p {
   font-size: 1rem;
@@ -193,29 +183,6 @@ nav {
   position: relative;
 }
 
-/*tableタグ*/
-.table {
-  display: grid;
-  justify-content: center; /* 中央に配置 */
-  margin: 20px 0; /* 上のマージンを追加 */
-}
-
-table {
-  border-collapse: collapse; /* ボーダーの重なりを解消 */
-  width: 80%; /* テーブルの幅を80%に設定 */
-  margin: 0 auto; /* テーブルを中央に配置 */
-  background-color: #ffffff; /* 背景色を設定 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* シャドウを追加 */
-}
-
-th, td {
-  border: 1px solid #dddddd; /* ボーダーを追加 */
-  text-align: center; /* テキストを中央に配置 */
-  padding: 8px; /* パディングを追加 */
-  font-size: 1rem;
-
-}
-
 .how-to-access {
   display: flex;
   flex-wrap: wrap;
@@ -223,6 +190,7 @@ th, td {
   margin: 40px 20px;
   align-items: center;
 }
+
 .how-to-access img {
   width: 50vw;
   height: auto;
@@ -235,6 +203,7 @@ th, td {
   align-items: center;
   font-weight: bold;
 }
+
 .how-to-access a {
   color: black;
 }
@@ -243,59 +212,61 @@ th, td {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0);
+  width: 100%; /* 幅を100%に設定 */
+  height: 100%; /* 高さを100%に設定 */
+  background: rgba(255, 255, 255, 0); /* 背景は透明 */
+  pointer-events: none; /* クリックイベントを無効化 */
 }
 
-.contact {
-  font-size: 1.5vw;
+.floor {
+  margin: 5vw 0 5vw 0;
+  font-size: 2vw;
 }
 
-.greeting p {
-  font-size: 1.5vw;
-}
-
-.floor-map img{
+.floor-map img {
   height: auto;
   width: 80%;
   margin-bottom: 100px;
 }
 
-
+.floor-map h2 {
+  margin-top: 1vw;
+}
 .floor-list {
   display: flex;
-  flex-direction: column; /* 縦に並べる */
+  flex-direction: column;
+  justify-content: space-between; /* アイテムを均等に配置 */
   margin-top: 60px;
-  width: 10%; /* 幅を固定値からパーセントに変更 */
+  width: 12.5vw;
   background-color: #f5f5f5;
-  height: auto; /* 高さを指定 */
+  height: 30vh; /* ビューポートの高さに対する割合で調整 */
   padding: 20px;
   border-right: 1px solid #ddd;
   position: fixed;
-  box-sizing: border-box; /* パディングを含める */
+  box-sizing: border-box;
 }
 
 .floor-list h2 {
-  font-size: 2vw; /* フォントサイズをvwで指定 */
-  margin-bottom: 10px;
+  font-size: 2vw;
+  margin-bottom: 1vw;
 }
 
 .floor-list ul {
-  display: grid;
+  display: flex; /* flexに変更してliを均等に配置 */
+  flex-direction: column; /* 縦にアイテムを並べる */
   list-style-type: none;
   padding: 0;
+  flex-grow: 0.5; /* ulが残りのスペースを埋める */
+  justify-content: space-evenly; /* liを均等に配置 */
 }
 
-.floor-list ul li {
-  margin: 30px 0;
-}
+
 
 .floor-list ul li a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  font-size: 1.5vw; /* フォントサイズをvwで指定 */
+  font-size: 1.5vw;
 }
 
 .floor-list ul li a:hover {
@@ -313,7 +284,6 @@ th, td {
   transition: outline 0.3s ease;
 }
 
-
 /* Footer styles */
 footer {
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
@@ -323,76 +293,76 @@ footer {
   position: relative;
   bottom: 0;
   width: auto;
-  font-size: 0.6rem;
+  font-size: 1.3vw;
 }
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-
-  h1 {
-    margin-top: 80px;
-    font-size: 1rem;
-  }
-  /* ナビゲーションバー */
-  .top-nav {
-    padding: 5px 0; /* 上下のパディングを減らす */
-  }
-
   .top-nav ul {
-    flex-direction: row;
-  }
-
-  .top-nav li {
-    margin: 5px 0; /* リストアイテムの上下マージンを調整 */
+    justify-content: center; /* ナビゲーションを中央に配置 */
   }
 
   .top-nav a {
-    font-size: 1.5vw; /* フォントサイズを小さく */
-    padding: 8px 10px; /* パディングを調整 */
-  }
-
-  /* メニューアイテムボタン */
-  ul.menu button {
-    width: 30vw; /* 小さな画面ではボタンを少し広めに */
-    height: 18vh; /* 高さも比例して調整 */
-    font-size: 3.5vw; /* フォントサイズを少し小さく調整 */
-  }
-  .image-container h1 {
-    font-size: 6vw; /* フォントサイズを調整 */
-  }
-
-  .image-container .theme h2 {
-    font-size: 5vw; /* フォントサイズを調整 */
-  }
-}
-
-
-/* Responsive styles for the image container and headings */
-@media screen and (max-width: 480px) {
-  .image-container h1 {
-    font-size: 7vw; /* フォントサイズを調整 */
-    top: 10%;
-  }
-
-  .image-container .theme h2 {
-    font-size: 6vw; /* フォントサイズを調整 */
-    top: 10%;
-  }
-  .image-container .theme {
-    top: 40%;
+    font-size: 1.8vw; /* フォントサイズを小さく */
+    padding: 5px; /* パディングを調整 */
   }
 
   .dates {
-    font-size: 3vw; /* フォントサイズを調整 */
-  }
-  ul.menu button {
-    width: 30vw; /* とても小さな画面では幅をほぼ全体に広げる */
-    height: 18vh; /* 高さはそのまま */
-    font-size: 3vw; /* フォントサイズをさらに調整 */
-  }
-  th, td {
-    font-size: 0.8rem; /* フォントサイズを小さくする */
-    padding: 4px; /* パディングを調整 */
+    font-size: 3vw; /* 日付のフォントサイズを調整 */
   }
 
+  ul.menu button {
+    width: 90%; /* ボタンの幅を画面幅に合わせる */
+    height: 15vh; /* ボタンの高さを調整 */
+    font-size: 3.5vw; /* ボタンのフォントサイズを調整 */
+  }
+
+  .image-container img {
+    width: 100%; /* 画像を画面幅いっぱいに表示 */
+    height: auto; /* アスペクト比を維持 */
+  }
+
+  .image-container h1 {
+    font-size: 6vw; /* フォントサイズを調整 */
+  }
+
+  .image-container .theme h2 {
+    font-size: 5vw; /* テーマ見出しサイズを調整 */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .top-nav ul {
+    justify-content: center; /* ナビゲーションを中央に配置 */
+  }
+
+  .top-nav a {
+    font-size: 1.1vw;
+  }
+
+  ul.menu button {
+    width: 95%; /* ボタンの幅を画面幅に合わせる */
+    height: 12vh; /* ボタンの高さを調整 */
+    font-size: 3vw; /* ボタンのフォントサイズを調整 */
+  }
+
+  .image-container img {
+    width: 100%; /* 画像を画面幅いっぱいに表示 */
+    height: auto; /* アスペクト比を維持 */
+  }
+
+  .slideshow {
+
+    height: auto; /* 画面の高さに合わせる */
+
+
+  }
+
+  .image-container h1 {
+    font-size: 5vw; /* 見出しサイズを調整 */
+  }
+
+  .image-container .theme h2 {
+    font-size: 4vw; /* テーマ見出しサイズを調整 */
+  }
 }
