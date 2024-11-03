@@ -1,69 +1,76 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden; /* 横スクロールを無効にする */
 }
 
 .classes {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap; /* 要素が画面幅に収まるように折り返し */
+  justify-content: center; /* 要素を中央揃え */
+  gap: 2vw; /* 各コンテナ間のスペース */
+  padding: 20px;
 }
 
 .container {
-    flex-grow: 1;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 2vw;
+  /* 最大幅を45vwに設定し、はみ出しを防ぐ */
+  box-sizing: border-box;
+  flex: 1;
 }
 
 .banner-title {
-    width: 100%; /* 幅を100%に変更 */
-    text-align: center;
-    font-size: 3vw;
-    font-weight: bold;
-    margin-bottom: 1cm;
+  width: 100%;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 1cm;
 }
 
 .banner-container {
-    width: 100%; /* 幅を100%に変更 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner-placeholder img {
-    max-width: 80%; /* コンテナの幅に収める */
-    max-height: 80%; /* コンテナの高さに収める */
-    object-fit: contain;
-    border: 1px solid black;
+  width: 100%;
+  max-width: 100%; /* コンテナの幅に収める */
+  max-height: 100%; /* コンテナの高さに収める */
+  object-fit: contain;
+  border: 1px solid black;
 }
 
-.appeal-points {
-    width: 80%; /* 幅を100%に変更 */
-    margin-top: 1cm;
-    border: 1px solid #000;
-    padding: 0.5cm;
-}
-
+.appeal-points,
 .project-description {
-    width: 80%; /* 幅を100%に変更 */
-    margin-top: 1cm;
-    margin-bottom: 10px;
-    min-height: 5cm;
-    border: 1px solid #000;
-    padding: 0.5cm;
-    box-sizing: border-box; /* パディングを含む幅計算 */
+  width: 100%;
+  max-width: 60vw; /* 最大幅を60vwに設定 */
+  margin-top: 1cm;
+  border: 1px solid #000;
+  padding: 2vw;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 3vw;
+}
+
+p {
+  font-size: 2vw;
 }
 
 .vertical-line {
-    width: 1px; /* 線の太さ */
-    background-color: lightgray; /* 線の色 */
-    height: auto; /* 自動調整 */
-    margin-bottom: 10px; /* 線の左右のスペース */
-    margin-top: 100px;
+  width: 1px;
+  background-color: lightgray;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 10vw;
 }
