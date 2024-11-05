@@ -32,7 +32,7 @@ body {
 /* Top navigation bar styles */
 .top-nav {
   background: rgba(255, 255, 255, 0.8);
-  padding: 10px 0;
+  padding-top: 2vw;
   position: fixed;
   top: 0;
   width: 100%;
@@ -219,7 +219,7 @@ nav {
 }
 
 .floor {
-  margin: 5vw 0 5vw 0;
+  margin: 8vw 0 5vw 0;
   font-size: 2vw;
 }
 

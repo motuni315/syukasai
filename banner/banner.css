@@ -21,7 +21,6 @@ body {
   align-items: center;
   padding: 20px;
   margin: 2vw;
-  /* 最大幅を45vwに設定し、はみ出しを防ぐ */
   box-sizing: border-box;
   flex: 1;
 }
