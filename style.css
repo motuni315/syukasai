@@ -32,7 +32,7 @@ body {
 /* Top navigation bar styles */
 .top-nav {
   background: rgba(255, 255, 255, 0.8);
-  padding-top: 2vw;
+  padding: 1.7vw 0 1vw 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -49,14 +49,14 @@ body {
 }
 
 .top-nav li {
-  margin: 0 15px;
+  margin: 0 1.5vw;
 }
 
 .top-nav a {
   color: black;
   text-decoration: none;
-  font-size: 2vw;
-  padding: 10px 15px;
+  font-size: 1.7vw;
+  padding: 1vw;
   display: inline-block;
 }
 
@@ -183,29 +183,19 @@ nav {
   position: relative;
 }
 
-.how-to-access {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 40px 20px;
-  align-items: center;
+.how-to-access  h1{
+  margin: 10vw 0 5vw 0;
+  font-size: 3vw;
 }
 
-.how-to-access img {
-  width: 50vw;
-  height: auto;
-}
-
-.how-to-access p {
-  font-size: 2vw;
-  padding: 75px;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-}
 
 .how-to-access a {
   color: black;
+}
+
+.how-to-access p {
+  margin: 10vw 0;
+  font-size: 2.5vw;
 }
 
 .overlay {
@@ -303,10 +293,7 @@ footer {
     justify-content: center; /* ナビゲーションを中央に配置 */
   }
 
-  .top-nav a {
-    font-size: 1.8vw; /* フォントサイズを小さく */
-    padding: 5px; /* パディングを調整 */
-  }
+
 
   .dates {
     font-size: 3vw; /* 日付のフォントサイズを調整 */
@@ -337,9 +324,7 @@ footer {
     justify-content: center; /* ナビゲーションを中央に配置 */
   }
 
-  .top-nav a {
-    font-size: 1.1vw;
-  }
+
 
   ul.menu button {
     width: 95%; /* ボタンの幅を画面幅に合わせる */
