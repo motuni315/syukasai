@@ -279,6 +279,7 @@ nav {
 /* Footer styles */
 footer {
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
+  margin-top: auto;
   color: white;
   padding: 10px;
   text-align: center;
