@@ -42,8 +42,8 @@ body {
 
 .banner-placeholder img {
   width: 100%;
-  max-width: 100%; /* コンテナの幅に収める */
-  max-height: 100%; /* コンテナの高さに収める */
+  max-width: 80%; /* コンテナの幅に収める */
+  max-height: 80%; /* コンテナの高さに収める */
   object-fit: contain;
   border: 1px solid black;
 }
