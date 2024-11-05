@@ -46,6 +46,7 @@ body {
   max-height: 80%; /* コンテナの高さに収める */
   object-fit: contain;
   border: 1px solid black;
+  pointer-events: none;
 }
 
 .appeal-points,

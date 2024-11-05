@@ -17,14 +17,12 @@ body {
   overflow: hidden;
   filter: brightness(50%);
 }
-img {
-  pointer-events: none;
-}
 
 .slideshow img {
   width: 100%;
   display: none;
   transition: opacity 1s ease-in-out;
+  pointer-events: none;
 }
 
 .slideshow img.active {
@@ -142,6 +140,7 @@ ul.menu button:hover {
 .image-container img {
   max-width: 100%;
   height: auto;
+  pointer-events: none;
 }
 
 
@@ -347,17 +346,14 @@ footer {
   }
 
   .slideshow {
-
     height: auto; /* 画面の高さに合わせる */
-
-
   }
 
   .image-container h1 {
-    font-size: 5vw; /* 見出しサイズを調整 */
+    font-size: 7vw; /* 見出しサイズを調整 */
   }
 
   .image-container .theme h2 {
-    font-size: 4vw; /* テーマ見出しサイズを調整 */
+    font-size: 6vw; /* テーマ見出しサイズを調整 */
   }
 }

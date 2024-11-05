@@ -40,7 +40,7 @@ body {
   list-style-type: disc; /* リスト項目に•を付ける */
   margin-left: 1em; /* インデントを少し追加 */
   text-align: left; /* 左揃え */
-  font-size: 1.5vw;
+  font-size: 2vw;
   margin-bottom: 1vw;
 }
 
@@ -65,4 +65,9 @@ body {
     .notice {
       font-size: 2vw;
     }
+
+  .notice-item li {
+    font-size: 2vw;
+
+  }
 }
