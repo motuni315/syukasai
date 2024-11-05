@@ -2,11 +2,11 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: auto;
   margin: 0;
   font-family: Arial, sans-serif;
   text-align: center;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .slideshow {
@@ -16,6 +16,9 @@ body {
   margin: 0 auto;
   overflow: hidden;
   filter: brightness(50%);
+}
+img {
+  pointer-events: none;
 }
 
 .slideshow img {
@@ -262,7 +265,7 @@ nav {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  font-size: 1.5vw;
+  font-size: 2.4vw;
 }
 
 .floor-list ul li a:hover {
@@ -283,7 +286,7 @@ nav {
 /* Footer styles */
 footer {
   background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 99, 71, 0.5));
-  margin-top: auto;
+  margin-top: 4vw;
   color: white;
   padding: 10px;
   text-align: center;

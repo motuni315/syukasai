@@ -96,7 +96,7 @@ p {
     flex-direction: column;
     justify-content: center; /* アイテムを均等に配置 */
     margin-top: 10vw;
-    width: 12vw;
+    width: 13.5vw;
     background-color: #f5f5f5;
     height: auto; /* ビューポートの高さに対する割合で調整 */
     padding: 2vw;
@@ -114,7 +114,7 @@ p {
     flex-grow: 1; /* ulが残りのスペースを埋める */
     justify-content: space-evenly; /* liを均等に配置 */
     margin: auto;
-    gap:1vw;
+    gap:4vw;
   }
 
   .event-list li {
@@ -124,7 +124,7 @@ p {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
   }
   .event-list a:hover {
     color: orangered;
