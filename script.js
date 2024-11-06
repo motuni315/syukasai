@@ -45,3 +45,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // 右クリックのコンテキストメニューを無効化
   document.addEventListener("contextmenu", event => event.preventDefault());
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const topNav = document.querySelector(".top-nav");
+  let lastScrollY = window.scrollY;
+
+  // 現在のページがindex.htmlかどうかを確認
+  const isIndexPage = window.location.pathname.endsWith("index.html") || window.location.pathname === "/";
+
+  if (isIndexPage) {
+    // index.htmlの場合、スクロール時に表示切替
+    window.addEventListener("scroll", () => {
+      if (window.scrollY < lastScrollY) {
+        // スクロールアップ
+        topNav.classList.add("show");
+      } else {
+        // スクロールダウン
+        topNav.classList.remove("show");
+      }
+      lastScrollY = window.scrollY;
+    });
+  } else {
+    // index.html以外では常時表示
+    topNav.classList.add("show");
+  }
+});
+
