@@ -44,7 +44,13 @@ body {
   font-size: 2vw;
   margin-bottom: 1vw;
 }
+.red {
+  color: red;
+}
 
+.underline{
+  text-decoration: underline;
+}
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
