@@ -120,7 +120,7 @@ p {
   }
 
   .event-list li {
-    margin-bottom: 3vw;
+    margin:2vw 0;
   }
   .event-list ul li a {
     text-decoration: none;

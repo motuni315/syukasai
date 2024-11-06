@@ -20,7 +20,7 @@ body {
 }
 
 .notice-item {
-    margin-bottom: 8vw;
+    margin: 4vw;
 }
 
 .notice-item h2 {
@@ -32,15 +32,16 @@ body {
 /* liのスタイル修正 */
 .notice-item ul {
   display: grid;
-  margin: 3vw 0;
+  margin: 2em; /* 上下の余白をリセット */
+  list-style-position: inside; /* •マークをリストアイテム内部に配置 */
 }
 
 .notice-item li {
   display: list-item;
   list-style-type: disc; /* リスト項目に•を付ける */
-  margin-left: 1em; /* インデントを少し追加 */
+  margin: 0.5em 0;
   text-align: left; /* 左揃え */
-  font-size: 3vw;
+  font-size: 2vw;
   margin-bottom: 1vw;
 }
 
