@@ -78,6 +78,49 @@ if ('caches' in window) {
   });
 }
 
+// 他のHTMLファイルをプリフェッチして、ナビゲーションの速度を向上させる
+function prefetchPages() {
+  const pages = ['greeting.html', 'floor_map.html', 'access.html', 'Notes/Notes.html'];
+  const cacheOptions = { cache: 'reload' }; // 最新バージョンのキャッシュを確保
+
+  pages.forEach(page => {
+    fetch(page, cacheOptions)
+      .then(response => {
+        if (!response.ok) throw new Error(`Failed to fetch ${page}`);
+        return response.text();
+      })
+      .then(content => console.log(`Prefetched ${page}`))
+      .catch(error => console.error(`Error prefetching ${page}:`, error));
+  });
+}
+
+// 遅延するレスポンスへのタイムアウト設定（5秒でタイムアウト）
+function fetchWithTimeout(resource, options = {}, timeout = 5000) {
+  return new Promise((resolve, reject) => {
+    const timer = setTimeout(() => {
+      reject(new Error('Request timed out'));
+    }, timeout);
+
+    fetch(resource, options)
+      .then(response => {
+        clearTimeout(timer);
+        if (!response.ok) throw new Error('Network response was not ok');
+        resolve(response);
+      })
+      .catch(reject);
+  });
+}
+
+// ページ読み込み時にプリフェッチを開始し、ネットワークエラーを処理
+document.addEventListener("DOMContentLoaded", () => {
+  prefetchPages(); // 他のページをバックグラウンドでプリフェッチ
+
+  // タイムアウト付きのリクエスト例
+  fetchWithTimeout('index.html')
+    .then(response => response.text())
+    .then(content => console.log('Main page loaded successfully'))
+    .catch(error => console.error('Error loading main page:', error));
+});
 
 
 
