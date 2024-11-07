@@ -71,3 +71,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
+// ページ読み込み時にキャッシュをクリア
+if ('caches' in window) {
+  caches.keys().then(names => {
+    for (let name of names) caches.delete(name);
+  });
+}
+
+
+
+
