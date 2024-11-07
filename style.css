@@ -210,6 +210,22 @@ nav {
 
 .how-to-access a {
   color: black;
+  text-decoration: none;
+  padding: 2vw 4vw; /* 上下と左右に余裕を持たせてタップしやすく */
+  border: 2px solid #333; /* ボタンのように見せるための境界線 */
+  display: inline-block; /* パディング全体がリンクとして機能 */
+  border-radius: 8px; /* 角を丸くしてボタンらしく */
+  background-color: #f7f7f7; /* 背景色を追加してボタン風に */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 少し影をつけて立体的に */
+  transition: background-color 0.3s ease; /* 背景色の変化にアニメーション */
+}
+
+.how-to-access a:hover {
+  background-color: #f0f0f0; /* ホバー時の背景色を設定 */
+}
+
+.how-to-access a:active {
+  background-color: #d0d0d0; /* タップ時に少し暗くして押した感じを出す */
 }
 
 .how-to-access p {
